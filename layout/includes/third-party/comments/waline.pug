@@ -1,0 +1,29 @@
+- const { serverURL, option, pageview } = theme.waline
+- const { lazyload, count, use } = theme.comments
+
+link(rel="stylesheet", href="https://unpkg.com/@waline/client@v3/dist/waline.css")
+
+script(type='module' data-pjax='').
+  import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+  init({
+    el: '#waline-wrap',
+    serverURL: 'https://waline.dimzone.cn/',
+    dark: 'html[data-theme="dark"]',
+    login: 'force'
+  });
+  
+
+style.
+  .wl-panel {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+  .wl-header {
+    border-top: 2px dashed var(--waline-border-color);
+    border-bottom: none !important;
+    border-radius: 0 !important;
+  }
+  .wl-footer {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--waline-border-color);
+  }

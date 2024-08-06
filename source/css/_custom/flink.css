@@ -1,0 +1,23 @@
+.flink .btns a.button {
+    height: auto !important;
+}
+.flink .btns #text {
+    font-size: 18px;
+    font-weight: 700;
+}
+.flink .btns p {
+    font-weight: 700;
+    font-size: 15px;
+    border-top: 3px dashed var(--theme);
+    padding-top: 5px;
+}
+@media screen and (min-width: 1024px) {
+    .flink .btns a {
+        width: 24% !important;
+    }
+}
+@media screen and (max-width: 450px) {
+    .flink .btns a {
+        width: 100% !important;
+    }
+}

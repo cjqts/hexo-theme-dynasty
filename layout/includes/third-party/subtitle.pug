@@ -1,0 +1,36 @@
+- const { effect,loop,source,sub,startDelay,typeSpeed,backSpeed } = theme.hometop.subtitle
+- let subContent = sub || new Array()
+- subContent = subContent.length ? subContent : new Array(config.subtitle)
+//- script.
+  function subtitleType () {
+    if (!{effect}) { 
+      window.typed = new Typed("#subtitle", {
+        strings: !{JSON.stringify(subContent)},
+        startDelay: 10,
+        typeSpeed: 80,
+        loop: !{loop},
+        showCursor: false,
+        backSpeed: 70
+      })
+    }
+  }
+  if (!{effect}) {
+    if (typeof Typed === 'function') {
+      subtitleType()
+    } else {
+      getScript('!{url_for(theme.asset.typed)}').then(subtitleType)
+    }
+  }
+
+script(src="/js/typed.js") 
+script.
+  var typed = new Typed("#subtitle", {
+    strings: !{JSON.stringify(subContent)},
+    startDelay: 10,
+    typeSpeed: 80,
+    loop: !{loop},
+    showCursor: false,
+    backSpeed: 70
+  });
+
+//- !{JSON.stringify(subContent)}

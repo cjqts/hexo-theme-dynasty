@@ -1,0 +1,21 @@
+#rightMenu
+	.rightMenu-group.rightMenu-small
+		a.rightMenu-item(onclick="window.history.back()")
+			i.dys.left_double
+		a.rightMenu-item(onclick="window.history.forward()")
+			i.dys.right_double
+		a.rightMenu-item(onclick="window.location.reload()")
+			i.dys.spinner3
+		a.rightMenu-item(onclick="rmf.scrollToTop()")
+			i.dys.arrowup
+	.rightMenu-group.rightMenu-line.hide#menu-text
+		a.rightMenu-item(onclick="rmf.copySelect()")
+			i.dys.copy
+			span='复制'
+	.rightMenu-group.rightMenu-line
+		a.rightMenu-item(onclick="toggleTheme()")
+			i.dys.yueliang
+			span='昼夜切换'
+		a.rightMenu-item(onclick="toRandomPost()")
+			i.dys.shuffle
+			span='阅读模式'

@@ -1,0 +1,35 @@
+.tag-cloud-list a
+    color: #fff
+    width: 47%
+    border-radius: 10px
+    padding: 2px 10px
+    margin-bottom: 10px
+    font-size: 20px !important
+    margin-right: 3%
+    background: var(--theme)
+
+.card-tag-cloud a
+    color: var(--heo-font) !important
+    border-bottom: 2px dashed var(--border)
+    padding: 3px 10px !important
+    margin-bottom: 2%
+    font-size: 16px !important
+
+.card-tag-cloud, #aside-cat-list, .card-archive-list
+    max-height: 135px
+    overflow-y: scroll
+    font-weight: 600
+
+.card-tag-cloud, #aside-cat-list, .card-archive-list
+    &::-webkit-scrollbar
+        display: none !important
+
+li.card-category-list-item, li.card-archive-list-item
+    width: 48%
+    border-bottom: 2px dashed var(--border)
+    margin-bottom: 2%
+    margin-right: 2%
+    display: inline-block
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a, #aside-content .card-categories ul.card-category-list>.card-category-list-item a
+    color: var(--heo-font) !important

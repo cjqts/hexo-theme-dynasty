@@ -1,0 +1,33 @@
+.footer
+  #in
+    .title
+      img(src=url_for(theme.footer.footer_logo.url) style='border-radius:100vh;box-shadow:0 8px 12px -3px #4259ef23')
+    .author
+      span.name=config.author
+      .descr=config.subtitle
+      if theme.footer.footer_icons.enable
+        .links
+          each i in theme.footer.footer_icons.icons
+            if i.class == "in"
+              a.deal_link(href=`${i.link}`, title=`${i.desrc}`)
+                i(class=`${i.icon}` style='font-size:25px')
+            else if i.class == "out"
+              a.deal_link(target='_blank', rel='noopener external nofollow', href=`${i.link}`, title=`${i.desrc}`)
+                i(class=`${i.icon}` style='font-size:25px')
+            else 
+              a.deal_link(href=`${i.link}`, title=`${i.desrc}`)
+                i(class=`${i.icon}` style='font-size:25px')
+      about.about
+        a.footer-button(href="/about/" style='box-shadow:6px 8px 12px -3px var(--shadow);background:var(--theme);border-radius:100vh;')
+          i.dys.caozuo-wailian
+          span 了解更多
+        a.footer-button(href="/cc/" style='box-shadow:6px 8px 12px -3px var(--shadow);background:var(--theme);border-radius:100vh;')
+          i.dys.creativecommons
+          span 转载协议
+      div.frame
+        span HEXO
+        i.dys.heart-beat(style='font-size:20px')
+        span Dynasty
+      //- p(style="margin:5px 10px 5px 10px;height:20px")
+        a.active(href="https://cdnnb.cn")
+          img(src="https://img.shields.io/badge/本站由失控的防御系统提供加速防御支持-green?style=flat&logo=Claris")
